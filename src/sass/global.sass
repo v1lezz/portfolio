@@ -1,0 +1,22 @@
+@import "./variables.sass"
+    
+@font-face
+  font-family: $font-family
+  src: url("../fonts/gtwalsheimpro_condensedmedium.otf") format("opentype")
+  font-style: normal
+  font-weight: normal
+
+::-webkit-scrollbar
+  width: 0px
+
+body
+  display: flex
+  justify-content: center
+  font-family: $font-family
+  background-color: $background-primary
+  color: $text-primary
+
+.container
+  padding: $padding-container
+  max-width: $container-max-width
+  width: 100%

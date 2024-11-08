@@ -1,0 +1,38 @@
+@import "./variables.sass"
+@import "./global.sass"
+@import "./reset.sass"
+
+.title
+    font-weight: $font-weight-medium
+    font-size: $font-size-xxl
+    line-height: 1.2
+    background: $gradient-title
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    margin-bottom: 40px
+
+.projects-list
+    &__item
+        padding: 3px
+        margin-right: $margin-base
+        background: $background-primary
+        margin-bottom: $margin-base
+        transition: opacity 0.3s
+        &-dom
+          background: $gradient-dom-project  
+        &-classroom
+            background: $gradient-dom-project
+        &-picture
+            background: $gradient-picture-project
+        a
+          padding: $padding-base
+          display: flex
+          width: 100%
+          font-weight: $font-weight-light
+          font-size: $font-size-lg
+          color: $text-primary
+          background: $background-primary
+        &:hover
+          opacity: $hover-opacity

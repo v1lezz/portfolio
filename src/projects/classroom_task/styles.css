@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Шрифт для текста на странице */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Внутренний отступ */
+    background-color: #1a1a1a; /* Темный фон для страницы */
+    color: #e0e0e0; /* Светлый цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.hidden {
+    display: none; /* Скрываем элемент */
+}
+
+.popup {
+    position: fixed; /* Фиксируем всплывающее окно относительно экрана */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75); /* Полупрозрачный черный фон */
+    display: flex; /* Используем flex для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.popup-content {
+    background-color: #8d61df; /* Фиолетовый фон всплывающего окна */
+    padding: 30px; /* Внутренний отступ */
+    border-radius: 15px; /* Закругление углов */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Тень  */
+    text-align: center; /* Текст внутри выравнивается по центру */
+}
+
+.popup-content__text {
+    font-size: 24px; /* Размер текста */
+    font-weight: 700; /* Жирный текст */
+    color: #fff; /* Белый цвет текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.popup-content__button {
+    border: none; /* Без границ */
+    cursor: pointer; /* Указатель мыши при наведении */
+    color: #fff; /* Белый текст */
+    background-color: #333; /* Темно-серый фон */
+    padding: 10px 20px; /* Внутренний отступ кнопки */
+    font-size: 16px; /* Размер текста */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анимация при наведении */
+}
+
+.transport-buttons {
+    margin-top: 30px; /* Отступ сверху */
+}
+
+.transport-buttons button {
+    background-color: #282828; /* Темно-серый фон кнопки */
+    border: none; /* Без границ */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 10px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные переходы при наведении */
+}
+
+.transport-buttons button img {
+    width: 80px; /* Ширина изображения кнопки */
+    padding: 10px; /* Внутренний отступ */
+    transition: transform 0.3s ease; /* Плавное изменение масштаба при наведении */
+}
+
+.fuel-slider {
+    margin-top: 30px; /* Отступ сверху для ползунка */
+}
+
+#fuel {
+    width: 350px; /* Ширина ползунка */
+    transition: width 0.3s ease; /* Плавное увеличение ширины при наведении */
+}
+
+#fuel:hover {
+    width: 370px; /* Увеличиваем ширину ползунка при наведении */
+}
+
+.content {
+    display: none; /* Изначально скрываем содержимое */
+}
+
+.content-active {
+    display: block; /* Показываем содержимое при активации */
+    opacity: 1; /* Прозрачность 100% */
+    transition: opacity 0.5s ease-in-out; /* Плавное появление содержимого */
+}
+
+.form {
+    width: 60%; /* Ширина формы 60% */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Тень для формы */
+    background-color: #8d61df; /* Фиолетовый фон формы */
+    color: white; /* Белый текст */
+    padding: 30px; /* Внутренний отступ */
+    margin: 20px auto; /* Отступ сверху/снизу и центрирование */
+    transition: transform 0.3s ease; /* Плавное изменение размеров формы */
+}
+
+.content__input {
+    background-color: #333; /* Темно-серый фон поля ввода */
+    color: #fff; /* Белый текст */
+    border: 1px solid #444; /* Серые границы поля */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    outline: none; /* Убираем контур при фокусе */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Плавное изменение фона и границы при фокусе */
+}
+
+.content__input:focus {
+    background-color: #444; /* Более светлый фон при фокусе */
+    border: 1px solid #666; /* Более светлая граница при фокусе */
+    box-shadow: none; /* Убираем тени */
+    outline: none; /* Убираем контур */
+}

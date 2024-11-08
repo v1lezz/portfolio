@@ -1,0 +1,264 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro", sans-serif;
+  src: url("../fonts/gtwalsheimpro_condensedmedium.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "GT Walsheim Pro", sans-serif;
+  background-color: #000000;
+  color: #F0F0F0;
+}
+
+.container {
+  padding: 60px 20px 0px 20px;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.container {
+  padding: 60px 20px 0px 20px;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.first-section {
+  min-height: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 90px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__text {
+  font-weight: 300;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__link {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-right: 10px;
+  color: #F0F0F0;
+  transition: color 0.3s;
+}
+.header__link:hover {
+  color: #bbbbbb;
+}
+.header__button-theme {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.main__textHello {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.main__titleName {
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 1.2;
+  background: linear-gradient(89.81deg, #9845e8 -1.72%, #33d2ff 54.05%, #dd5789 99.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+}
+.main__textAbout {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.footer__text {
+  font-weight: 300;
+  font-size: 24px;
+  color: #F0F0F0;
+}
+.footer__nav {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.footer__link {
+  background: #000000;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+.footer__wrapper {
+  max-width: 290px;
+  width: 100%;
+  padding: 3px;
+  margin-right: 10px;
+  transition: opacity 0.3s;
+}
+.footer__wrapper-email {
+  background: linear-gradient(10deg, #9358F7, #10D7E2);
+}
+.footer__wrapper-linkedin {
+  background: linear-gradient(10deg, #6964DE, #FCA6E9);
+}
+.footer__wrapper-upwork {
+  background: linear-gradient(10deg, #F4426C, #FBF2B1);
+}
+.footer__wrapper-github {
+  background: linear-gradient(10deg, #D24074, #6518B4);
+}
+.footer__wrapper:hover {
+  opacity: 0.7;
+}
+
+.logo-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.circle {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.circle:nth-child(1) {
+  background: linear-gradient(145deg, #4e8cff, #1a73e8);
+}
+.circle:nth-child(2) {
+  background: linear-gradient(145deg, #ff6ec7, #ff3d8e);
+  top: 10px;
+  left: 10px;
+}
+.circle:nth-child(3) {
+  background: linear-gradient(145deg, #ffd700, #ffb800);
+  top: 20px;
+  left: 20px;
+}
+
+@media (max-width: 1250px) {
+  .footer__nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer__wrapper {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 940px) {
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .footer__nav {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=index.css.map */

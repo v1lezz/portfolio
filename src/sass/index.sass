@@ -1,0 +1,163 @@
+// --- Gradient Definitions for Logo ---
+$gradient-logo-1: linear-gradient(145deg, #4e8cff, #1a73e8)
+$gradient-logo-2: linear-gradient(145deg, #ff6ec7, #ff3d8e)
+$gradient-logo-3: linear-gradient(145deg, #ffd700, #ffb800)
+
+// --- Main Styles ---
+@import "./reset.sass"
+@import "./variables.sass"
+@import "./global.sass"
+
+.container
+  padding: $padding-container
+  max-width: $container-max-width
+  width: 100%
+
+.first-section
+  min-height: 300px
+  height: 100%
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  margin-bottom: 90px
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__text
+    font-weight: $font-weight-light
+    font-size: $font-size-xl
+    text-transform: uppercase
+
+  &__nav
+    display: flex
+    align-items: center
+
+  &__link
+    font-weight: $font-weight-light
+    font-size: $font-size-lg
+    line-height: 1.4
+    margin-right: $margin-base
+    color: $text-primary
+    transition: color 0.3s
+
+  &__link:hover
+    color: $text-secondary
+
+  &__button-theme
+    width: $button-size
+    height: $button-size
+    object-fit: contain
+
+.main
+  &__textHello
+    font-weight: $font-weight-light
+    font-size: $font-size-lg
+    margin-bottom: $margin-base
+
+  &__titleName
+    font-weight: $font-weight-medium
+    font-size: $font-size-xxl
+    line-height: 1.2
+    background: $gradient-title
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    margin-bottom: 40px
+
+  &__textAbout
+    font-weight: $font-weight-light
+    font-size: $font-size-lg
+    line-height: 40px
+
+.footer
+  &__icon
+    width: $footer-icon-size
+    height: $footer-icon-size
+    margin-right: $margin-base
+
+  &__text
+    font-weight: $font-weight-light
+    font-size: $font-size-lg
+    color: $text-primary
+
+  &__nav
+    display: grid
+    justify-items: center
+    grid-template-columns: repeat(4, 1fr)
+    gap: 20px
+
+  &__link
+    background: $background-primary
+    padding: $padding-base
+    display: flex
+    align-items: center
+
+  &__wrapper
+    max-width: 290px
+    width: 100%
+    padding: 3px
+    margin-right: $margin-base
+    transition: opacity 0.3s
+
+    &-email
+      background: $gradient-email
+
+    &-linkedin
+      background: $gradient-linkedin
+
+    &-upwork
+      background: $gradient-upwork
+
+    &-github
+      background: $gradient-github
+
+    &:hover
+      opacity: $hover-opacity
+
+.logo-container
+  position: relative
+  width: 50px
+  height: 50px
+
+.circle
+  cursor: pointer
+  position: absolute
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  opacity: 0.8
+
+  &:nth-child(1)
+    background: $gradient-logo-1
+
+  &:nth-child(2)
+    background: $gradient-logo-2
+    top: 10px
+    left: 10px
+
+  &:nth-child(3)
+    background: $gradient-logo-3
+    top: 20px
+    left: 20px
+
+@media (max-width: 1250px)
+  .footer
+    &__nav
+      grid-template-columns: repeat(3, 1fr)
+    &__wrapper
+      margin-right: 0px
+
+@media (max-width: 940px)
+  .footer
+    &__nav
+      grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 800px)
+  .footer
+    &__nav
+      grid-template-columns: repeat(1, 1fr) 
+

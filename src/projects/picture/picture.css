@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.square {
+    width: 200px;   /* ширина квадрата */
+    height: 200px;  /* высота квадрата (равна ширине) */
+    background-color: #3498db; /* цвет квадрата */
+}

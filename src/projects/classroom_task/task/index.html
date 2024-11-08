@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транспорт и расход топлива</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Всплывающее окно с вопросом -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p class="popup-content__text">Приступаем?</p>
+        <button id="yes-btn" class="popup-content__button popup-content__button-yes">Да</button>
+        <button id="no-btn" class="popup-content__button popup-content__button-no">Нет</button>
+    </div>
+</div>
+<form class="form">
+    <div>
+        <h1 id="message"></h1>
+    </div>
+    <!-- Основное содержимое страницы -->
+    <div id="content" class="content">
+        <p id="lenght"></p>
+        <div class="transport-buttons">
+            <button id="moto-btn">
+                <img src="./moto.png" alt="Мотоцикл">
+            </button>
+            <button id="car-btn">
+                <img src="./car.png" alt="Машина">
+            </button>
+        </div>
+        <div class="fuel-slider">
+            <label for="fuel">Количество бензина (л): </label>
+            <input type="range" id="fuel" min="0" max="100" value="50">
+            <span id="fuel-amount">50</span> л
+        </div>
+        <div id="result"></div>
+    </div>
+</form>
+
+<script src="index.js"></script>
+</body>
+</html>
